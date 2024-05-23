@@ -3,13 +3,23 @@
     :page-title="memory ? memory.title : 'Loading...'"
     default-back-link="/memories"
   >
-    <h2 v-if="memory">Details page</h2>
+    <MemoryOverview
+      v-if="memory"
+      :title="memory.title"
+      :description="memory.description"
+      :image="memory.image"
+    />
     <h2 v-else>No such memory exists!</h2>
   </BaseLayout>
 </template>
 
 <script>
+import MemoryOverview from '../components/memories/MemoryOverview.vue';
+
 export default {
+  components: {
+    MemoryOverview,
+  },
   data() {
     return {
       memoryId: this.$route.params.id, // params are always strings

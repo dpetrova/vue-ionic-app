@@ -12,9 +12,14 @@ const routes = [
     component: Memories,
   },
   {
+    path: '/memories/add',
+    name: 'Add',
+    component: () => import('../views/AddMemoryPage.vue'), // lazy loading
+  },
+  {
     path: '/memories/:id',
     name: 'Memory',
-    component: () => import('../views/MemoryDetails.vue'), // lazy loading
+    component: () => import('../views/MemoryDetailsPage.vue'), // lazy loading
   },
 ];
 
