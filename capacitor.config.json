@@ -1,0 +1,11 @@
+{
+  "appId": "com.dpetrova.mymemories",
+  "appName": "My Memories",
+  "webDir": "dist",
+  "npmClient": "npm",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  }
+}
